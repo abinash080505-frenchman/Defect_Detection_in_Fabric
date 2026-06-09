@@ -1,4 +1,3 @@
-```python
 import streamlit as st
 from ultralytics import YOLO
 from PIL import Image
@@ -62,9 +61,9 @@ st.markdown("""
 }
 
 .footer {
-    text-align:center;
-    color:gray;
-    font-size:14px;
+    text-align: center;
+    color: gray;
+    font-size: 14px;
 }
 
 </style>
@@ -159,7 +158,7 @@ if uploaded_file is not None:
 
             defect_name = model.names[class_id]
 
-            # Rename model class names
+            # Rename any unwanted label
             if "not_valid" in defect_name.lower():
                 defect_name = "Hole"
 
@@ -219,4 +218,3 @@ st.markdown(
     '<div class="footer">Developed using YOLOv8 and Streamlit for Fabric Quality Inspection</div>',
     unsafe_allow_html=True
 )
-```
